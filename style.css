@@ -1,0 +1,74 @@
+body {
+  max-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 2rem;
+}
+
+main {
+  border: 2px solid #989a9d;
+  width: 350px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.screen {
+  height: 50px;
+  border: 2px solid #989a9d;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.screen__content {
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.lines {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.signs {
+  width: 80px;
+  background-color: #989a9d;
+}
+
+.number__and__others {
+  width: 80px;
+  background-color: #f1f3f4;
+}
+
+.add__bg__color {
+  background-color: #000;
+  color: #fff;
+  transition: ease 0.5s all;
+}
+
+/* Equal to css */
+.equal__to {
+  width: 80px;
+  /* background-color: #f1f3f4; */
+  background-color: rgb(143, 143, 242);
+}
+.equal__to:hover {
+  background-color: rgb(99, 99, 244);
+}
