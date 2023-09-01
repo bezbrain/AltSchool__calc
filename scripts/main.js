@@ -9,6 +9,7 @@ const screen = document.querySelector(".screen");
 const firstNumber = document.querySelector(".first__number");
 const screenSign = document.querySelector(".screen__sign");
 const secondNumber = document.querySelector(".second__number");
+const screenResult = document.querySelector(".showResult");
 
 const reset = document.querySelector(".reset");
 const equalTo = document.querySelector(".equal__to");
@@ -28,11 +29,11 @@ firstContent.forEach((each) => {
   each.onclick = (e) => {
     const content = e.currentTarget.textContent;
     if (screenSign.textContent === "") {
+      screenResult.textContent = "";
       firstNumber.textContent += content;
-      // console.log("First Number");
     } else {
+      screenResult.textContent = "";
       secondNumber.textContent += content;
-      // console.log("Last Number");
     }
   };
 });
@@ -47,6 +48,7 @@ btnSign.forEach((each) => {
 
 // Handle click of reset
 reset.onclick = () => {
+  screenResult.textContent = "";
   clear(firstNumber, screenSign, secondNumber);
 };
 
@@ -59,23 +61,23 @@ equalTo.onclick = () => {
   if (sign === "+") {
     const result = firstToNumber + secondToNumber;
     clear(firstNumber, screenSign, secondNumber);
-    firstNumber.textContent = result;
+    screenResult.textContent = result;
   } else if (sign === "-") {
     const result = firstToNumber - secondToNumber;
     clear(firstNumber, screenSign, secondNumber);
-    firstNumber.textContent = result;
+    screenResult.textContent = result;
   } else if (sign === "*") {
     const result = firstToNumber * secondToNumber;
     clear(firstNumber, screenSign, secondNumber);
-    firstNumber.textContent = result;
+    screenResult.textContent = result;
   } else if (sign === "÷") {
     const result = firstToNumber / secondToNumber;
     clear(firstNumber, screenSign, secondNumber);
-    firstNumber.textContent = result;
+    screenResult.textContent = result;
   } else {
     const result = "Invalid Operation";
     clear(firstNumber, screenSign, secondNumber);
-    firstNumber.textContent = result;
+    screenResult.textContent = result;
   }
 };
 
@@ -87,19 +89,19 @@ specialBtnSign.forEach((each) => {
     if (e.currentTarget.textContent === "√") {
       const result = Math.sqrt(firstToNumber);
       clear(firstNumber, screenSign, secondNumber);
-      firstNumber.textContent = result;
+      screenResult.textContent = result;
     } else if (e.currentTarget.textContent === "x²") {
       const result = firstToNumber ** 2;
       clear(firstNumber, screenSign, secondNumber);
-      firstNumber.textContent = result;
+      screenResult.textContent = result;
     } else if (e.currentTarget.textContent === "%") {
       const result = firstToNumber / 100;
       clear(firstNumber, screenSign, secondNumber);
-      firstNumber.textContent = result;
+      screenResult.textContent = result;
     } else {
       const result = "Invalid Operation";
       clear(firstNumber, screenSign, secondNumber);
-      firstNumber.textContent = result;
+      screenResult.textContent = result;
     }
   };
 });
