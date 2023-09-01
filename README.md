@@ -1,6 +1,6 @@
 # AltSchoolAfrica Calculator Project
 
-### Introduction
+## Introduction
 
 This is a a calculator that performs most basic operations.
 
@@ -13,7 +13,7 @@ This is a a calculator that performs most basic operations.
 - Multiplication
 - Division
 
-#### Sppecial Operations:
+#### Special Operations:
 
 - Sqare root
 - Square of numbers
